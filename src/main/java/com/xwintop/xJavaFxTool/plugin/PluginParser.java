@@ -76,9 +76,9 @@ public class PluginParser {
             pluginJarInfo.setControllerType(controllerType);
             pluginJarInfo.setTitle(title);
 
-            if (controllerType.equals("Node")) {
+            if ("Node".equals(controllerType)) {
                 pluginJarInfo.setFxmlPath(url);
-            } else if (controllerType.equals("WebView")) {
+            } else if ("WebView".equals(controllerType)) {
                 pluginJarInfo.setPagePath(url);
             }
 

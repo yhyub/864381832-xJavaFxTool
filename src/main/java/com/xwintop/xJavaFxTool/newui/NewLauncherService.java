@@ -60,9 +60,9 @@ public class NewLauncherService {
         Tab tab;
         String controllerType = pluginJarInfo.getControllerType();
 
-        if (controllerType.equals("Node")) {
+        if ("Node".equals(controllerType)) {
             tab = PluginLoader.loadIsolatedPluginAsTab(pluginJarInfo, tabPane);
-        } else if (controllerType.equals("WebView")) {
+        } else if ("WebView".equals(controllerType)) {
             tab = PluginLoader.loadWebViewAsTab(pluginJarInfo, tabPane);
         } else {
             throw new AppException("找不到 controllerType=" + controllerType + " 的加载方式");
