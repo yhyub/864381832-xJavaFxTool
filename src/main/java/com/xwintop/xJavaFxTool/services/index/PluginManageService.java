@@ -123,7 +123,7 @@ public class PluginManageService {
     private boolean isPluginDataMatch(Map<String, String> map, String keyword) {
         return map.entrySet().stream().anyMatch(
             entry ->
-                !entry.getKey().equals("downloadUrl") &&
+                !"downloadUrl".equals(entry.getKey()) &&
                     entry.getValue().toLowerCase().contains(keyword.toLowerCase())
         );
     }
